@@ -47,7 +47,7 @@ function msgTypeAnimation() {
 function getWouldbeRandomPost() {
 	var posts = [];
 
-	$.get('http://api.vk.com/method/wall.search?owner_id=-118956942&count=10&query=Вот+бы', function(res) {
+	$.get('http://api.vk.com/method/wall.search?owner_id=-118956942&query=Вот+бы', function(res) {
 		if (res.response.length > 1) {
 			$.each(res.response, function(k, v) {
 				if (k == 0) {
