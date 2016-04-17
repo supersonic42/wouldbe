@@ -44,17 +44,85 @@ video {
 }
 
 main {
+    background-color: #333;
     height: 100%;
+    padding: 2%;
+    position: relative;
 }
 
-#flash {
-    background-color: rgba(133, 13, 26, 0.9);
-    height: 100%;
-    padding: 10px;
+#topWrap {
+    height: 50%;
+    position: relative;
     text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+#wouldbeFaceWrap {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+#flashingEyes {
+    height: 10%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 900ms ease-in-out;
+    width: 80%;
+    z-index: 9;
 }
 
 #wouldbeFace {
+    left: 50%;
     max-height: 100%;
     max-width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#msgWrap {
+    background-color: #ccaf80;
+    border: 10px solid #946544;
+    border-radius: 20px;
+    font-family: 'Play', sans-serif;
+    font-size: 24px;
+    height: 46%;
+    left: 50%;
+    line-height: 30px;
+    overflow-y: auto; 
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+#msgWrap .cursor {
+    animation: blink 700ms infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #msgWrap {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    #msgWrap {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
