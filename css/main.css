@@ -59,6 +59,7 @@ main {
 }
 
 #wouldbeFaceWrap {
+    animation: headRoll 9000ms infinite
     display: inline-block;
     height: 100%;
     position: relative;
@@ -111,6 +112,13 @@ main {
     to {
         opacity: 0;
     }
+}
+
+@keyframes headRoll {
+    0% { transform: rotate(0deg) }
+    33% { transform: rotate(-15deg)}
+    66% { transform: rotate(15deg)}
+    100% { transform: rotate(0deg) }
 }
 
 @media (max-width: 600px) {
