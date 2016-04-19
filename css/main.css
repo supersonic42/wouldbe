@@ -59,7 +59,7 @@ main {
 }
 
 #wouldbeFaceWrap {
-    animation: headRoll 9000ms infinite
+    animation: headRoll 9000ms infinite;
     display: inline-block;
     height: 100%;
     position: relative;
